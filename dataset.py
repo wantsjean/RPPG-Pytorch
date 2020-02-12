@@ -1,6 +1,14 @@
-import numpy as np
-from scipy.ndimage import gaussian_filter1d
-a = np.array([30,200,77,98])
-a = 1/a
-filted = gaussian_filter1d(a,sigma=1)
-print(filted)
+from torch.utils.data import Dataset
+
+class RPPG_Dataset(Dataset):
+    def __init__(self, data_path = "", mode = "train"):
+        self.mode = mode
+    
+    def _load_data(self):
+        pass
+
+    def __len__(self):
+        pass
+    
+    def __getitem__(self,index):
+        pass

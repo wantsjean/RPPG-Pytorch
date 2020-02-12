@@ -9,3 +9,4 @@ class Cfg:
         self.num_epoch = 500
         self.val_freq = 10
         self.milestones = [300, 400]
+        self.num_workers = 4
