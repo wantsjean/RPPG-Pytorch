@@ -69,11 +69,11 @@ class RPPG(nn.Module):
         if 'ce' in self.losses:
             out['ce'] = self.fc_ce2(self.relu(self.drop(self.fc_ce1(x))))
         if 'mse' in self.losses:
-            out['mse'] = self.fc_mse3(self.relu(self.fc_mse2(self.relu(self.drop(self.fc_mse1(x))))))
+            out['mse'] = self.fc_mse3(self.relu(self.fc_mse2(self.relu(self.drop(self.fc_mse1(x)))))).squeeze()
         
         return out
 
 if __name__ == "__main__":
     model = RPPG()
-    inputs = torch.randn((8,1,18,64))
+    inputs = torch.randn((32,1,18,64))
     print(model(inputs))
