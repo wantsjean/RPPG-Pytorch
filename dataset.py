@@ -24,7 +24,7 @@ class RPPG_Dataset(Dataset):
         # count and visualize
         # self._count()
         # if training, split the data by val_rate
-        if mode in ['trian', 'val']:
+        if mode in ['train', 'val']:
             self._split_data(cur, k_fold, rng_seed)
 
         # if mode in ['val', 'test']:
